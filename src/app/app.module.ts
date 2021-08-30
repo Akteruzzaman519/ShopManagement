@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductComponent } from './product/product.component';
 import { LaptopComponent } from './laptop/laptop.component';
 import { MobileComponent } from './mobile/mobile.component';
+import { DataService } from './data.service';
+import{HttpClientModule} from '@angular/common/http'
 
 
 
@@ -28,9 +30,10 @@ import { MobileComponent } from './mobile/mobile.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
